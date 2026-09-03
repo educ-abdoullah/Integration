@@ -1,0 +1,20 @@
+name: GitHub Actions Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Créer un fichier
+        run: echo "Bonjour depuis la pipeline" > resultat.txt
+
+      - name: Uploader le fichier comme artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultat
+          path: resultat.txt
