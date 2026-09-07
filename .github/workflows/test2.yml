@@ -17,4 +17,4 @@ jobs:
           python-version: "3.x"
 
       - name: Lancer les tests en mode détaillé
-        run: python3 -m unittest -v test/test1.py
+        run: python3 -m test/test1.py -v
