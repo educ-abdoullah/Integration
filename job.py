@@ -1,3 +1,13 @@
-a = 2 
+import os
 
-print("coucou", a)
+token = os.getenv("SECRET_API_TOKEN")
+
+print("Le secret est accessible :", token is not None)
+print("Valeur :", token)
+
+
+
+
+
+
+
